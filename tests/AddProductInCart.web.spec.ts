@@ -10,7 +10,7 @@ import { ProductItem } from '../data/ProductItems';
 import { CartPage } from '../pages/CartPage';
 
 
-let poManager: PageManager;
+let pageManager: PageManager;
 let loginPage: LoginPage;
 let productsPage: ProductsPage;
 let menu: Menu;
@@ -20,8 +20,8 @@ let cartPage: CartPage;
 // TEST CASE #888
 test(`Add product in cart check`, async ({ page }: { page: Page }) => {
 
-  poManager = new PageManager(page);
-  loginPage = await poManager.getLoginPage();
+  pageManager = new PageManager(page);
+  loginPage = await pageManager.getLoginPage();
 
   // Log in
   productsPage = await loginPage.login(adminEmail, adminPassword);
